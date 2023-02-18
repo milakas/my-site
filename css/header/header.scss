@@ -1,0 +1,62 @@
+@import "../variables/variables";
+
+/* Header Section */
+.header {
+  z-index: 1000;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: $color-primary;
+  -webkit-filter: drop-shadow(0 0 3px #88756971);
+  filter: drop-shadow(0 0 3px #88756971);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 69px;
+    padding: 22px 61px;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 0;
+  }
+
+  &__eng::before {
+    content: "English version";
+    color: $coloron-primary;
+  }
+  &__eng::after {
+    content: url(../../img/eng.svg);
+    width: 34px;
+    height: 36px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .header {
+    &__container {
+      padding: 28px 20px;
+    }
+    &__nav {
+      gap: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .header {
+    &__eng::before {
+      display: none;
+    }
+  }
+}

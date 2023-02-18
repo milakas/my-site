@@ -1,0 +1,159 @@
+@import "../variables/variables";
+
+/* Portfolio Section */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  padding: 74px 61px 104px;
+
+  &__heading {
+    margin-bottom: 54px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &__container {
+    // display: flex;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 28px;
+    row-gap: 14px;
+    margin-bottom: 84px;
+  }
+
+  &__card {
+    // display: flex;
+    // flex-direction: column;
+    // width: 310px;
+    grid-column: auto/ span 3;
+    margin-bottom: 25px;
+    border-radius: 10px;
+  }
+
+  &__img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 100%;
+    height: 470px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #ebe6e16e;
+  }
+
+  &__link {
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    border-radius: 10px;
+    background-color: #ebe6e16e;
+  }
+
+  &__btn {
+    font-size: 16px;
+    padding: 11px 30px;
+    border-radius: 10px;
+    background-color: rgba(235, 230, 225, 0.2);
+    color: rgba(136, 117, 105, 0.2);
+    border: none;
+  }
+
+  &__btn:focus {
+    outline: solid 1px $coloron-primary;
+    color: $coloron-primary;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__btn:hover,
+  &__btn:active {
+    outline: solid 1px $coloron-primary;
+    color: $coloron-primary;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__btn {
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .portfolio {
+    &__card {
+      // width: 250px;
+    }
+
+    &__img {
+      // height: 450px;
+    }
+    &__link,
+    &__btn {
+      font-size: 16px;
+    }
+
+    &__link {
+      padding: 15px 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .portfolio {
+    &__card {
+      // width: 200px;
+    }
+
+    &__img {
+      // height: 400px;
+    }
+    // &__link,
+    // &__btn {
+    //   font-size: 14px;
+    // }
+
+    &__link {
+      padding: 10px 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .portfolio {
+    padding: 122px 20px 160px;
+    &__container {
+      margin-bottom: 20px;
+    }
+    &__card {
+      width: 133px;
+    }
+
+    &__img {
+      height: 204px;
+    }
+
+    // &__link,
+    // &__btn {
+    //   font-size: 10px;
+    // }
+
+    &__link {
+      padding: 5px 31px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .portfolio {
+    &__container {
+      justify-content: space-evenly;
+    }
+    &__heading {
+      align-self: center;
+    }
+  }
+}

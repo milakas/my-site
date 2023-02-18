@@ -1,0 +1,128 @@
+@import "../variables/variables";
+
+/* About Section */
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 120px 61px 148px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 660px;
+    padding: 20px;
+  }
+
+  &__job {
+    font-size: 30px;
+    line-height: 1.5;
+    color: $coloron-secondary;
+  }
+
+  &__name {
+    margin-bottom: 28px;
+    font-size: 58px;
+    line-height: 1.5;
+  }
+
+  &__text {
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+
+  &__img {
+    width: 45%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+  }
+
+  &__subtitle {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 25px;
+    line-height: 30px;
+    color: $coloron-secondary;
+  }
+
+  &__stack {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &__html {
+    background-image: url(../../img/html5.svg);
+  }
+
+  &__css {
+    background-image: url(../../img/css3.svg);
+  }
+
+  &__js {
+    background-image: url(../../img/js.svg);
+  }
+  &__react {
+    background-image: url(../../img/react.svg);
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .about {
+    &__img {
+      width: 40%;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .about {
+    &__job {
+      font-size: 25px;
+      transition: font-size 0.3s ease-in-out;
+    }
+    &__name {
+      font-size: 40px;
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+    }
+    &__icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media only screen and (max-width: 767.98px) {
+    .about {
+      flex-direction: column;
+      transition: flex-direction 0.3s ease-in-out;
+      padding: 0px 20px 30px;
+      &__container {
+        padding: 0;
+      }
+      &__img {
+        align-self: center;
+        width: 100%;
+        transition: width 0.3s ease-in-out;
+      }
+    }
+  }
+}
