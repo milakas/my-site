@@ -1,128 +1,176 @@
-@import "../variables/variables";
+@import '../variables/variables';
 
 /* About Section */
 .about {
-  display: flex;
-  justify-content: space-between;
-  padding: 120px 61px 148px;
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 660px;
-    padding: 20px;
-  }
-
-  &__job {
-    font-size: 30px;
-    line-height: 1.5;
-    color: $coloron-secondary;
-  }
-
-  &__name {
-    margin-bottom: 28px;
-    font-size: 58px;
-    line-height: 1.5;
-  }
-
-  &__text {
-    margin-bottom: 28px;
-    line-height: 1.5;
+  &__top-bg {
+    position: relative;
+    height: 246px;
+    width: 100%;
+    background-color: $color-secondary;
+    @media only screen and (max-width: 991.98px) {
+      height: 200px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__img {
-    width: 45%;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 360px;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: center;
     object-position: center;
+    border-radius: 50%;
+
+    @media only screen and (max-width: 991.98px) {
+      width: 250px;
+      transition: 0.3s ease-in;
+    }
   }
 
-  &__subtitle {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 25px;
-    line-height: 30px;
+  &__container {
+    text-align: center;
+    padding: 200px $padding-y-lg 65px;
+    @media only screen and (max-width: 991.98px) {
+      padding: 106px $padding-y-md 20px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__job {
+    margin: 0;
+    font-size: 30px;
     color: $coloron-secondary;
+    @media only screen and (max-width: 991.98px) {
+      font-size: 20px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__name {
+    margin-bottom: 60px;
+    font-size: 40px;
+    @media only screen and (max-width: 991.98px) {
+      margin-bottom: 30px;
+      font-size: 30px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 30px;
+    row-gap: 10px;
+  }
+
+  &__education,
+  &__stack {
+    grid-column: auto / span 6;
+    padding: $padding-y-md 20px;
+    text-align: left;
+    border: 0.5px solid rgba($coloron-primary, 80%);
+    border-radius: 10px;
+
+    @media only screen and (max-width: 991.98px) {
+      grid-column: 1 / span 12;
+      padding: 15px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__education {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media only screen and (max-width: 991.98px) {
+      gap: 15px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__edu-container {
+    position: relative;
+    padding-left: 50px;
+  }
+
+  &__icon {
+    position: absolute;
+    display: block;
+    left: -1px;
+    background-image: url(../../img/graduation-cap.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 34px;
+    height: 28px;
+
+    @media only screen and (max-width: 767.98px) {
+      width: 28px;
+      height: 20px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+
+    @media only screen and (max-width: 767.98px) {
+      font-size: 14px;
+      transition: 0.3s ease-in;
+    }
+  }
+
+  &__edu-text {
+    font-size: 18px;
+    color: $coloron-secondary;
+
+    @media only screen and (max-width: 767.98px) {
+      font-size: 12px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__stack {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    justify-content: space-between;
+    padding-right: 60px;
+    padding-left: 60px;
   }
 
-  &__icon {
-    width: 56px;
-    height: 56px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  &__stack-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
   }
 
-  &__html {
-    background-image: url(../../img/html5.svg);
-  }
+  &__progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-  &__css {
-    background-image: url(../../img/css3.svg);
-  }
-
-  &__js {
-    background-image: url(../../img/js.svg);
-  }
-  &__react {
-    background-image: url(../../img/react.svg);
-  }
-}
-
-@media only screen and (max-width: 1199.98px) {
-  .about {
-    &__img {
-      width: 40%;
-      transition: width 0.3s ease-in-out;
+    gap: 22px;
+    width: 65%;
+    @media only screen and (max-width: 767.98px) {
+      gap: 15px;
     }
   }
-}
-
-@media only screen and (max-width: 991.98px) {
-  .about {
-    &__job {
-      font-size: 25px;
-      transition: font-size 0.3s ease-in-out;
-    }
-    &__name {
-      font-size: 40px;
-      transition: font-size 0.3s ease-in-out;
-    }
-
-    &__text {
-      font-size: 16px;
-    }
-
-    &__subtitle {
-      font-size: 18px;
-    }
-    &__icon {
-      width: 30px;
-      height: 30px;
-    }
+  &__progress {
+    width: 100%;
+    background-color: rgba(136, 117, 105, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba($coloron-primary, 30%);
   }
 
-  @media only screen and (max-width: 767.98px) {
-    .about {
-      flex-direction: column;
-      transition: flex-direction 0.3s ease-in-out;
-      padding: 0px 20px 30px;
-      &__container {
-        padding: 0;
-      }
-      &__img {
-        align-self: center;
-        width: 100%;
-        transition: width 0.3s ease-in-out;
-      }
-    }
+  &__bar {
+    height: 10px;
+    border-radius: 10px;
+    background-color: rgba($coloron-primary, 30%);
   }
 }

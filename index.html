@@ -7,86 +7,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Главная страница</title>
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <!-- Header -->
-  <header class="header ">
-    <div class="header__container container">
+  <header class="header" id="header">
+    <div class="header__container">
       <nav class="header__nav">
-        <a class="header__link link" href="about">Обо мне</a>
-        <a class="header__link link" href="portfolio">Портфолио</a>
-        <a class="header__link link" href="contacts">Контакты</a>
+        <a class="header__link link" href="#about">Обо мне</a>
+        <a class="header__link link" href="#portfolio">Портфолио</a>
+        <a class="header__link link" href="#contacts">Контакты</a>
       </nav>
       <a class="header__link  header__eng link" href="index-eng.html"></a>
     </div>
   </header>
   <main>
     <!-- About Section -->
-    <section class="about container" id="about">
-      <img class="about__img" src="img/photo.png" alt="photo">
+    <section class="about " id="about">
+      <div class="about__top-bg">
+        <img class="about__img" src="img/photo-circle.png" alt="photo">
+      </div>
       <div class="about__container">
-        <p class="about__job">Junior Frontend Developer</p>
+        <p class="about__job">Frontend Developer</p>
         <h1 class="about__name">Милена Парфенова</h1>
-        <div class="about__container-text">
-          <p class="about__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates voluptas quae
-            magni a non? Eius ea
-            dolores officiis quisquam aspernatur tempore laudantium veniam enim nesciunt, illum quidem, provident
-            delectus
-            dignissimos in sunt facilis quam rerum labore architecto dolorum impedit ratione?</p>
-        </div>
-        <div class="about__stack">
-          <h3 class="about__subtitle">Мой стек:</h3>
-          <span class="about__icon about__html"></span>
-          <span class="about__icon about__css"></span>
-          <span class="about__icon about__js"></span>
-          <span class="about__icon about__react"></span>
+        <div class="about__row">
+          <div class="about__education">
+            <div class="about__edu-container">
+              <span class="about__icon"></span>
+              <div class="about__title">
+                Очный курс “Frontent разработчик”
+              </div>
+              <p class="about__edu-text">
+                Nordic IT School (январь - июль 2023)
+              </p>
+            </div>
+            <div class="about__edu-container">
+              <span class="about__icon"></span>
+              <div class="about__title">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="about__edu-text">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+            <div class="about__edu-container">
+              <span class="about__icon"></span>
+              <div class="about__title">
+                Lorem ipsum dolor sit amet.
+              </div>
+              <p class="about__edu-text">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+            </div>
+          </div>
+          <div class="about__stack">
+            <div class="about__stack-container">
+              <div class="about__title">
+                HTML5
+              </div>
+              <div class="about__title">
+                CSS3/SCSS
+              </div>
+              <div class="about__title">
+                JavaScript
+              </div>
+              <div class="about__title">
+                React
+              </div>
+              <div class="about__title">
+                Vue.js
+              </div>
+            </div>
+
+            <div class="about__progress-bar">
+              <div class="about__progress">
+                <div class="about__bar" style="max-width: 98%"></div>
+              </div>
+              <div class="about__progress">
+                <div class="about__bar" style="max-width: 80%"></div>
+              </div>
+              <div class="about__progress">
+                <div class="about__bar" style="max-width: 70%"></div>
+              </div>
+              <div class="about__progress">
+                <div class="about__bar" style="max-width: 40%"></div>
+              </div>
+              <div class="about__progress">
+                <div class="about__bar" style="max-width: 35%"></div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
     <!-- Portfolio Section -->
-    <section class="portfolio container" id="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="portfolio__heading">Портфолио</h2>
       <div class="portfolio__container">
         <div class="portfolio__card">
-          <span class="portfolio__icon"></span>
-          <img class="portfolio__img" src="img/work-1.png" alt="">
+          <img class="portfolio__img" src="img/work-1.png" alt="work-1">
           <a class="link portfolio__link portfolio__link_disabled " href="https://github.com/milakas/shop"
-            target="_blank">Исходный
-            код</a>
+            target="_blank">Исходный код</a>
         </div>
         <div class="portfolio__card">
-          <span class="portfolio__icon"></span>
-          <img class="portfolio__img" src="img/work-3.jpg" alt="">
-          <a class="link portfolio__link portfolio__link_disabled " href="#">Исходный код</a>
+          <img class="portfolio__img" src="img/work-3.jpg" alt="work-2">
+          <a class="link portfolio__link portfolio__link_disabled ">Исходный код</a>
         </div>
         <div class="portfolio__card">
-          <span class="portfolio__icon"></span>
-          <img class="portfolio__img" src="img/work-4.jpg" alt="">
-          <a class="link portfolio__link portfolio__link_disabled " href="#">Исходный код</a>
+          <img class="portfolio__img" src="img/work-4.jpg" alt="work-3">
+          <a class="link portfolio__link portfolio__link_disabled">Исходный код</a>
         </div>
         <div class="portfolio__card">
-          <span class="portfolio__icon"></span>
-          <img class="portfolio__img" src="img/work-2.jpg" alt="">
-          <a class="link portfolio__link portfolio__link_disabled " href="#">Исходный код</a>
+          <img class="portfolio__img" src="img/work-2.jpg" alt="work-4">
+          <a class="link portfolio__link portfolio__link_disabled">Исходный код</a>
         </div>
       </div>
       <button class="portfolio__btn">Смотреть еще</button>
     </section>
   </main>
-  <footer class="footer " id="contacts">
-    <div class="container footer__container">
+  <footer class="footer" id="contacts">
+    <div class="footer__container">
       <h2 class="footer__title">Контакты</h2>
       <p class="footer__city">Москва</p>
       <div class="footer__links">
-        <a class="footer__link link" href="#">Telegram</a>
-        <a class="footer__link link" href="https://github.com/milakas">GitHub</a>
-        <a class="footer__link link" href="#">Mail</a>
+        <a class="footer__link link" href="https://t.me/mi_parfenova" target="_blank">Telegram</a>
+        <a class="footer__link link" href="https://github.com/milakas" target="_blank">GitHub</a>
+        <a type="main" class="footer__link link" href="mailto:mi_parfenova@mail.ru">Mail</a>
       </div>
     </div>
   </footer>
-
+  <script src="scripts.js"></script>
 </body>
 
 </html>

@@ -1,30 +1,67 @@
-@import "../variables/variables";
+@import '../variables/variables';
 
 /* Footer */
 .footer {
-  padding: 50px 61px;
+  padding: 50px $padding-y-lg;
   background-color: #ebe6e180;
+  @media only screen and (max-width: 991.98px) {
+    padding-right: $padding-y-md;
+    padding-left: $padding-y-md;
+  }
 
   &__title {
     display: inline-block;
     margin-bottom: 20px;
     margin-right: 30px;
     font-size: 25px;
+    @media only screen and (max-width: 991.98px) {
+      margin-right: 15px;
+      font-size: 20px;
+      transition: 0.3s ease-in;
+    }
+    @media only screen and (max-width: 767.98px) {
+      font-size: 18px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__city {
     display: inline-block;
     font-size: 16px;
     color: $coloron-secondary;
+    @media only screen and (max-width: 991.98px) {
+      font-size: 14px;
+      transition: 0.3s ease-in;
+    }
+    @media only screen and (max-width: 767.98px) {
+      font-size: 12px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__links {
     display: flex;
     gap: 20px;
+    @media only screen and (max-width: 991.98px) {
+      gap: 15px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__link {
-    padding: 20px 0;
+    padding: 5px;
     border-radius: 10px;
+    @media only screen and (max-width: 991.98px) {
+      font-size: 18px;
+      transition: 0.3s ease-in;
+    }
+    @media only screen and (max-width: 767.98px) {
+      font-size: 14px;
+      transition: 0.3s ease-in;
+    }
+    &:focus {
+      outline: solid 1px $coloron-secondary;
+      transition: 0.3s ease-in;
+    }
   }
 }

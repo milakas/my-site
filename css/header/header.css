@@ -1,10 +1,10 @@
 /* Header Section */
 .header {
-  z-index: 1000;
+  z-index: 10;
   position: sticky;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #ebe6e1;
   filter: drop-shadow(0 0 3px rgba(136, 117, 105, 0.4431372549));
 }
 .header__container {
@@ -14,37 +14,65 @@
   height: 69px;
   padding: 22px 61px;
 }
+@media only screen and (max-width: 991.98px) {
+  .header__container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 .header__nav {
   display: flex;
   align-items: center;
-  gap: 51px;
+  gap: 30px;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__nav {
+    gap: 15px;
+    transition: 0.3s ease-in;
+  }
 }
 .header__link {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 10px 0;
+  padding: 5px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__link {
+    font-size: 18px;
+    transition: 0.3s ease-in;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .header__link {
+    font-size: 14px;
+    transition: 0.3s ease-in;
+  }
+}
+.header__link:focus {
+  outline: solid 1px #baafa9;
+  transition: 0.3s ease-in;
 }
 .header__eng::before {
   content: "English version";
   color: #887569;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__eng::before {
+    display: none;
+  }
 }
 .header__eng::after {
   content: url(../../img/eng.svg);
   width: 34px;
   height: 36px;
 }
-
 @media only screen and (max-width: 767.98px) {
-  .header__container {
-    padding: 28px 20px;
-  }
-  .header__nav {
-    gap: 15px;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .header__eng::before {
-    display: none;
+  .header__eng::after {
+    width: 24px;
+    height: 36px;
+    transform: translateY(5px);
+    transition: 0.3s ease-in;
   }
 }/*# sourceMappingURL=header.css.map */
