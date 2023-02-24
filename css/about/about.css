@@ -1,7 +1,6 @@
 /* About Section */
 .about__top-bg {
   position: relative;
-  height: 246px;
   width: 100%;
   background-color: #ebe6e1;
 }
@@ -13,34 +12,45 @@
 }
 .about__img {
   position: absolute;
-  top: 50px;
-  right: 0;
-  left: 0;
-  margin: 0 auto;
-  width: 360px;
+  top: 80px;
+  left: 61px;
+  width: 40%;
+  height: 639px;
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
-  border-radius: 50%;
+  -o-object-position: right;
+  object-position: right;
+  border-radius: 10px;
 }
 @media only screen and (max-width: 991.98px) {
   .about__img {
-    width: 250px;
+    top: 50px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    -o-object-position: center;
+    object-position: center;
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
     transition: 0.3s ease-in;
   }
 }
 .about__container {
-  text-align: center;
-  padding: 200px 61px 65px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  padding: 130px 61px;
 }
 @media only screen and (max-width: 991.98px) {
   .about__container {
+    display: block;
+    text-align: center;
     padding: 106px 20px 20px;
     transition: 0.3s ease-in;
   }
 }
 .about__job {
+  grid-column: 7/span5;
   margin: 0;
   font-size: 30px;
   color: #baafa9;
@@ -52,17 +62,18 @@
   }
 }
 .about__name {
-  margin-bottom: 60px;
+  grid-column: 7/span5;
+  margin-bottom: 30px;
   font-size: 40px;
 }
 @media only screen and (max-width: 991.98px) {
   .about__name {
-    margin-bottom: 30px;
     font-size: 30px;
     transition: 0.3s ease-in;
   }
 }
 .about__row {
+  grid-column: 7/span5;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   -moz-column-gap: 30px;
@@ -70,7 +81,7 @@
   row-gap: 10px;
 }
 .about__education, .about__stack {
-  grid-column: auto/span 6;
+  grid-column: 1/span 12;
   padding: 20px 20px;
   text-align: left;
   border: 0.5px solid rgba(136, 117, 105, 0.8);
@@ -78,7 +89,6 @@
 }
 @media only screen and (max-width: 991.98px) {
   .about__education, .about__stack {
-    grid-column: 1/span 12;
     padding: 15px;
     transition: 0.3s ease-in;
   }
@@ -86,13 +96,7 @@
 .about__education {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-}
-@media only screen and (max-width: 991.98px) {
-  .about__education {
-    gap: 15px;
-    transition: 0.3s ease-in;
-  }
+  gap: 15px;
 }
 .about__edu-container {
   position: relative;
@@ -117,7 +121,7 @@
   }
 }
 .about__title {
-  font-size: 20px;
+  font-size: 18px;
 }
 @media only screen and (max-width: 767.98px) {
   .about__title {
@@ -126,7 +130,7 @@
   }
 }
 .about__edu-text {
-  font-size: 18px;
+  font-size: 16px;
   color: #baafa9;
 }
 @media only screen and (max-width: 767.98px) {
@@ -146,17 +150,18 @@
   flex-direction: column;
   justify-content: center;
   gap: 8px;
+  margin-right: 10px;
 }
 .about__progress-bar {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 22px;
+  gap: 26px;
   width: 65%;
 }
 @media only screen and (max-width: 767.98px) {
   .about__progress-bar {
-    gap: 15px;
+    gap: 20px;
   }
 }
 .about__progress {
@@ -166,7 +171,7 @@
   border: 1px solid rgba(136, 117, 105, 0.3);
 }
 .about__bar {
-  height: 10px;
+  height: 5px;
   border-radius: 10px;
   background-color: rgba(136, 117, 105, 0.3);
 }/*# sourceMappingURL=about.css.map */
