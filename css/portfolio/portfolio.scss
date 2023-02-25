@@ -1,30 +1,24 @@
 @import '../variables/variables';
+@import '../mixin/mixin';
 
 /* Portfolio Section */
 .portfolio {
   display: flex;
   flex-direction: column;
   padding: 74px $padding-y-lg 104px;
-  @media only screen and (max-width: 991.98px) {
+  @include media-breakpoint-down-md {
     padding-right: $padding-y-md;
     padding-left: $padding-y-md;
   }
-  @media only screen and (max-width: 767.98px) {
+  @include media-breakpoint-down-sm {
     padding-top: 40px;
   }
 
   &__heading {
     margin-bottom: 54px;
-    font-size: 25px;
     line-height: 30px;
-    @media only screen and (max-width: 991.98px) {
-      font-size: 20px;
-      transition: 0.3s ease-in;
-    }
-    @media only screen and (max-width: 767.98px) {
-      font-size: 18px;
+    @include media-breakpoint-down-sm {
       margin-bottom: 40px;
-      transition: 0.3s ease-in;
     }
   }
 
@@ -35,8 +29,11 @@
     column-gap: 28px;
     row-gap: 14px;
     margin-bottom: 84px;
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       margin-bottom: 40px;
+    }
+    @include media-breakpoint-down-xs {
+      display: block;
     }
   }
 
@@ -44,10 +41,10 @@
     grid-column: auto/ span 3;
     margin-bottom: 25px;
     border-radius: 10px;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       grid-column: auto/ span 4;
     }
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       grid-column: auto/ span 6;
     }
   }
@@ -63,8 +60,11 @@
     border-radius: 10px;
     margin-bottom: 15px;
     background-color: #ebe6e16e;
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       height: 350px;
+    }
+    @include media-breakpoint-down-xs {
+      height: 250px;
     }
   }
 
@@ -76,12 +76,12 @@
     line-height: 24px;
     border-radius: 10px;
     background-color: #ebe6e16e;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       font-size: 14px;
       padding: 10px;
       transition: 0.3s ease-in;
     }
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       font-size: 12px;
       transition: 0.3s ease-in;
     }
@@ -104,16 +104,16 @@
     background-color: rgba(235, 230, 225, 0.2);
     color: rgba(136, 117, 105, 0.2);
     border: none;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       font-size: 12px;
       transition: 0.3s ease-in;
     }
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       font-size: 10px;
       transition: 0.3s ease-in;
     }
-    @media only screen and (max-width: 767.98px) {
-      font-size: 10px;
+    @include media-breakpoint-down-xs {
+      font-size: 8px;
       transition: 0.3s ease-in;
     }
   }

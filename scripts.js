@@ -30,5 +30,6 @@ seeMoreBtn.addEventListener('click', function () {
       hidden[i].style.display = 'block';
     }
   }
+  //скрыть кнопкц при отсутствии скрытых карточек
   seeMoreBtn.style.display = 'none';
 });

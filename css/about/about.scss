@@ -1,4 +1,5 @@
 @import '../variables/variables';
+@import '../mixin/mixin';
 
 /* About Section */
 .about {
@@ -6,8 +7,12 @@
     position: relative;
     width: 100%;
     background-color: $color-secondary;
-    @media only screen and (max-width: 991.98px) {
-      height: 200px;
+    @include media-breakpoint-down-md {
+      height: 180px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      height: 160px;
       transition: 0.3s ease-in;
     }
   }
@@ -23,7 +28,7 @@
     -o-object-position: right;
     object-position: right;
     border-radius: 10px;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       top: 50px;
       right: 0;
       left: 0;
@@ -35,16 +40,25 @@
       border-radius: 100%;
       transition: 0.3s ease-in;
     }
+    @include media-breakpoint-down-xs {
+      width: 200px;
+      height: 200px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     padding: 130px $padding-y-lg;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       display: block;
       text-align: center;
-      padding: 106px $padding-y-md 20px;
+      padding: 120px $padding-y-md 20px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      padding-top: 100px;
       transition: 0.3s ease-in;
     }
   }
@@ -54,8 +68,12 @@
     margin: 0;
     font-size: 30px;
     color: $coloron-secondary;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       font-size: 20px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      font-size: 18px;
       transition: 0.3s ease-in;
     }
   }
@@ -64,8 +82,12 @@
     grid-column: 7 / span5;
     margin-bottom: 30px;
     font-size: 40px;
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       font-size: 30px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      font-size: 25px;
       transition: 0.3s ease-in;
     }
   }
@@ -76,6 +98,11 @@
     grid-template-columns: repeat(12, 1fr);
     column-gap: 30px;
     row-gap: 10px;
+    @include media-breakpoint-down-xs {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
   }
 
   &__education,
@@ -85,9 +112,12 @@
     text-align: left;
     border: 0.5px solid rgba($coloron-primary, 80%);
     border-radius: 10px;
-
-    @media only screen and (max-width: 991.98px) {
+    @include media-breakpoint-down-md {
       padding: 15px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      padding: 10px 15px;
       transition: 0.3s ease-in;
     }
   }
@@ -96,11 +126,18 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @include media-breakpoint-down-xs {
+      gap: 8px;
+    }
   }
 
   &__edu-container {
     position: relative;
     padding-left: 50px;
+    @include media-breakpoint-down-xs {
+      padding-left: 25px;
+      transition: 0.3s ease-in;
+    }
   }
 
   &__icon {
@@ -113,18 +150,25 @@
     background-size: contain;
     width: 34px;
     height: 28px;
-
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       width: 28px;
       height: 20px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      width: 15px;
       transition: 0.3s ease-in;
     }
   }
 
   &__title {
     font-size: 18px;
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       font-size: 14px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      font-size: 12px;
       transition: 0.3s ease-in;
     }
   }
@@ -133,17 +177,22 @@
     font-size: 16px;
     color: $coloron-secondary;
 
-    @media only screen and (max-width: 767.98px) {
+    @include media-breakpoint-down-sm {
       font-size: 12px;
+      transition: 0.3s ease-in;
+    }
+    @include media-breakpoint-down-xs {
+      font-size: 10px;
       transition: 0.3s ease-in;
     }
   }
 
   &__stack {
     display: flex;
-    justify-content: space-between;
-    padding-right: 60px;
-    padding-left: 60px;
+    justify-content: center;
+    gap: 25px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   &__stack-container {
@@ -151,7 +200,9 @@
     flex-direction: column;
     justify-content: center;
     gap: 8px;
-    margin-right: 10px;
+    @include media-breakpoint-down-xs {
+      gap: 5px;
+    }
   }
 
   &__progress-bar {
@@ -159,9 +210,12 @@
     flex-direction: column;
     justify-content: center;
     gap: 26px;
-    width: 65%;
-    @media only screen and (max-width: 767.98px) {
+    width: 70%;
+    @include media-breakpoint-down-sm {
       gap: 20px;
+    }
+    @include media-breakpoint-down-xs {
+      gap: 16px;
     }
   }
   &__progress {
@@ -175,5 +229,8 @@
     height: 5px;
     border-radius: 10px;
     background-color: rgba($coloron-primary, 30%);
+    @include media-breakpoint-down-xs {
+      height: 3px;
+    }
   }
 }

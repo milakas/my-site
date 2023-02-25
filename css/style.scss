@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 // Stylesheets
 @import 'variables/variables';
+@import 'mixin/mixin';
 
 *,
 *::after,
@@ -24,11 +25,10 @@ html {
 
 body {
   font-family: $body-font-family;
-  font-size: 20px;
   line-height: 1.3;
   background-color: $color-primary;
   color: $coloron-primary;
-  @media (max-width: 767.98px) {
+  @include media-breakpoint-down-sm {
     font-size: 16px;
   }
 }
@@ -36,11 +36,46 @@ body {
 .link {
   text-decoration: none;
   color: $coloron-primary;
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  @include media-breakpoint-down-md {
+    font-size: 18px;
+    transition: 0.3s ease-in;
+  }
+  @include media-breakpoint-down-sm {
+    font-size: 14px;
+    transition: 0.3s ease-in;
+  }
+  @include media-breakpoint-down-xs {
+    font-size: 12px;
+    transition: 0.3s ease-in;
+  }
 
   &:active,
   &:hover {
     color: $coloron-secondary;
     transition: color 0.3s ease-in-out;
+  }
+  &:focus {
+    outline: solid 1px $coloron-secondary;
+    transition: 0.3s ease-in;
+  }
+}
+
+.heading-secondary {
+  font-size: 25px;
+  @include media-breakpoint-down-md {
+    font-size: 20px;
+    transition: 0.3s ease-in;
+  }
+  @include media-breakpoint-down-sm {
+    font-size: 18px;
+    transition: 0.3s ease-in;
+  }
+  @include media-breakpoint-down-xs {
+    font-size: 14px;
+    transition: 0.3s ease-in;
   }
 }
 

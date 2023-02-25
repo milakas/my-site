@@ -1,0 +1,29 @@
+@mixin media-breakpoint-down-xs {
+  @media only screen and (max-width: 576.98px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down-sm {
+  @media only screen and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down-md {
+  @media only screen and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin eng-logo {
+  content: url(../../img/eng.svg);
+  width: 34px;
+  height: 36px;
+  @include media-breakpoint-down-sm {
+    width: 24px;
+    height: 36px;
+    transform: translateY(5px);
+    transition: 0.3s ease-in;
+  }
+}
